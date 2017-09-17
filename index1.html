@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>history1</title>
+</head>
+<style>
+	button{
+		padding: 10px 10px;
+		background: #000450;
+		font-size: 14px;
+		color: #fff;
+		outline: none;
+		border: 0;
+		border-radius: 5px;
+	}
+</style>
+<body>
+	<h1> <a href="index.html">这是第二个界面</a></h1>
+	<button id="forward">前进</button>
+	<button id="back">后退</button>
+	<button id="refresh">刷新</button>
+	<script>
+		let forward = document.getElementById('forward');
+		let back = document.getElementById('back');
+		let refresh = document.getElementById('back');
+		alert(history.length);
+		forward.onclick = function(){
+			history.forward();
+		}
+		
+		back.onclick = function(){
+			history.back();
+		}
+		refresh.onclick = function(){
+			history.go(-1);
+		}
+
+	</script>
+</body>
+</html>
